@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ContentFulService } from '../Services/content-ful.service';
 
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',

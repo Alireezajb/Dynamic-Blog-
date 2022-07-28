@@ -1,4 +1,3 @@
-
 header {
     box-shadow: -1px 4px 11px -7px rgba(0, 0, 0, 0.65);
     -webkit-box-shadow: -1px 4px 11px -7px rgba(0, 0, 0, 0.65);
@@ -8,6 +7,7 @@ header {
 .card-img-top {
     width: 100%;
 }
+
 .recent-body {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -45,7 +45,8 @@ header {
     margin-top: -7px;
     text-transform: capitalize;
 }
-.div2 > small{
+
+.div2>small {
     font-weight: bold;
     font-size: 11px;
 }
@@ -57,8 +58,14 @@ header {
 
 .card-container {
     margin-bottom: 40px;
+    width: 79%;
+    margin: 10px auto;
 }
 
+.card-container img {
+    height: 538px;
+
+}
 
 
 .entry ul {
@@ -86,7 +93,7 @@ header {
 .more a {
 
     display: inline-block;
-    background: #68A4C4;
+    background: #1a6f9c;
     color: white !important;
     padding: 6px 20px;
     transition: 0.3s;
@@ -111,7 +118,8 @@ main {
     box-shadow: 0 4px 16px rgb(0 0 0 / 10%);
     padding: 0 26px;
     position: absolute;
-    right: 0
+    right: 70px;
+    margin-top: 10px !important;
 }
 
 .myCarousel {
@@ -121,9 +129,11 @@ main {
 
 }
 
-.myCarousel img {
-    height: 600px;
+.nav {
+    margin-right: 84px;
+
 }
+
 
 .footer-newsletter {
     padding: 50px 0;
@@ -139,10 +149,12 @@ main {
     color: #a2cce3;
 }
 
-li>p {
+li>p,
+li>a {
     padding: 0 5px;
     margin-top: 4px;
     color: #777777;
+    text-decoration: none;
 
 }
 
@@ -166,36 +178,98 @@ li {
 .card-text {
     display: flex;
 }
-.entri-m
-{
+
+.entri-m {
     margin: 0 auto;
 }
-h5, markdown > p{
+
+h5,
+markdown>p {
     padding: 0 12px;
+
 }
 
+markdown>p {
+    text-align: justify;
+
+}
+
+footer ul {
+    margin-right: 0 !important;
+}
 
 @media (max-width: 768px) {
     .crad-recent {
-        margin-top: 0!important;
+        margin-top: 0 !important;
     }
 
-    
+    input[type='search'] {
+        display: none;
+    }
+
+    .entry-meta li {
+        padding: 0 8px;
+        font-size: 13px;
+    }
+
+
+
+    h5,
+    markdown>p {
+        padding: 0 12px;
+        text-align: justify;
+        font-size: 15px;
+    }
+
+    markdown>img {
+        max-width: 100%;
+    }
+
+
 }
 
 @media (max-width: 980px) {
     .crad-recent {
         display: none;
-     
-        }
-    
+
+    }
+
+    .dropdown {
+        position: absolute !important;
+        top: 22px;
+        right: 16px;
+    }
+
+    .card-container {
+        margin-bottom: 40px;
+        width: 100%;
+
+    }
+
+    .card-container img {
+        height: auto;
+
+    }
+
+    footer ul {
+        margin-right: 0 !important;
+    }
 }
+
 @media (min-width: 992px) {
     .crad-recent {
         display: block;
-     
-        }
-    
+
+    }
+
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}

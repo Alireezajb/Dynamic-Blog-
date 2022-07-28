@@ -8,6 +8,10 @@ import { BlogPostComponent } from './blog-post/blog-post.component';
 import { MarkdownModule } from 'ngx-markdown';
 
 
+
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,8 +24,11 @@ import { MarkdownModule } from 'ngx-markdown';
     MarkdownModule.forRoot(),
 
 
+
   ],
-  providers: [],
+  providers: [
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
