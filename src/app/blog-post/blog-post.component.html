@@ -1,37 +1,36 @@
+<header class="p-3 mb-3 border-bottom bg-light">
 
-    <header class="p-3 mb-3 border-bottom bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
-                    aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
 
-                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                    <li class="nav-item d-flex i-items  my-1">
+                        <i class="bi bi-house-door"></i>
+                        <a routerLink=""> Home</a>
+                    </li>
+                    <li class="nav-item d-flex i-items  my-1">
+                        <i class="bi bi-github"></i>
+                        <a href="https://github.com/Alireezajb"> GitHub</a>
+                    </li>
 
-                        <li class="nav-item d-flex i-items  my-1">
-                            <i class="bi bi-house-door"></i>
-                            <a routerLink=""> Home</a>
-                        </li>
-                        <li class="nav-item d-flex i-items  my-1">
-                            <i class="bi bi-github"></i>
-                            <a href="https://github.com/Alireezajb"> GitHub</a>
-                        </li>
+                    <li class="nav-item d-flex i-items my-1">
+                        <i class="bi bi-instagram "></i>
+                        <a href="https://www.instagram.com/blockchain.jb/"> Instagram</a>
+                    </li>
 
-                        <li class="nav-item d-flex i-items my-1">
-                            <i class="bi bi-instagram "></i>
-                            <a href="https://www.instagram.com/blockchain.jb/"> Instagram</a>
-                        </li>
+                </ul>
 
-                    </ul>
-                    
-                </div>
             </div>
-        </nav>
-    </header>
+        </div>
+    </nav>
+</header>
 
 
 <main id="main" *ngIf="blogpost$ |async as blogpost">
@@ -58,8 +57,9 @@
                                         </li>
                                         <li class="d-flex justify-content-center ali i-items">
                                             <i class="bi bi-alarm"></i>
-                                            <p>{{blogpost.fields.updatedDate | date }}</p>
+                                            <p>{{blogpost.sys.createdAt | date }}</p>
                                         </li>
+
                                         <li class="d-flex justify-content-center ali i-items">
                                             <i class="bi bi-tags"></i>
                                             <p>{{blogpost.metadata.tags[0].sys.id}}</p>
@@ -72,7 +72,7 @@
                                     </markdown>
                                 </p>
                                 <p class="card-text"><i class="bi bi-clock-history"></i>
-                                    <small class="text-muted">Last updated {{blogpost.fields.updatedDate | date
+                                    <small class="text-muted">Last updated {{blogpost.sys.updatedAt | date
                                         }}</small>
                                 </p>
                                 <div class="entry-footer">
@@ -106,7 +106,6 @@
 
         </div>
     </section>
-
 </main>
 <div class="container">
     <footer class="py-3 my-4">

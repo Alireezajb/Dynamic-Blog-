@@ -10,7 +10,6 @@ import { ContentFulService } from './../Services/content-ful.service';
 })
 export class BlogPostComponent implements OnInit {
 
-  progress:any = 20;
   constructor(private route: ActivatedRoute, private ContentFulService: ContentFulService) { }
 
   blogpost$: Observable<any> | undefined;
